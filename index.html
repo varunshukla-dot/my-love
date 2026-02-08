@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Valentine Story 💗</title>
+
+<style>
+html,body{
+  margin:0;
+  height:100%;
+  background:linear-gradient(180deg,#ffdde9,#ffd1e3,#ffb6d6);
+  font-family:'Georgia',serif;
+  color:#4a0b2e;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* ---------- STAGE ---------- */
+#stage{
+  position:fixed;
+  top:0; left:0;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  opacity:0;
+  transition:opacity 1.5s ease-in-out;
+}
+
+.slide.active{ opacity:1; }
+
+/* ---------- IMAGES ---------- */
+.cine-img{
+  max-width:340px;
+  border-radius:18px;
+  border:3px solid hotpink;
+  box-shadow:0 0 30px rgba(255,105,180,0.8);
+}
+
+/* ---------- VIDEO ---------- */
+video{
+  width:600px;
+  max-width:90%;
+  border-radius:18px;
+  border:3px solid hotpink;
+}
+
+/* ---------- TWO FRAMES ---------- */
+.frames{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.frame{
+  border:3px solid hotpink;
+  padding:10px;
+}
+
+/* ---------- BUTTONS ---------- */
+button{
+  padding:15px 40px;
+  font-size:20px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  margin:10px;
+}
+#yes{background:#ff4081;color:white;}
+#no{background:#333;color:white;position:relative;}
+
+/* ---------- FINAL TEXT ---------- */
+#fireworks,#final-line{ display:none; }
+
+/* ---------- FLOATING HEARTS ---------- */
+.heart{
+  position:fixed;
+  bottom:-50px;
+  font-size:28px;
+  animation: floatUp 7s linear infinite;
+  opacity:0.8;
+  pointer-events:none;
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0) translateX(0) scale(1);opacity:1;}
+  to{transform:translateY(-110vh) translateX(40px) scale(1.2);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+  <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<div id="stage">
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+<h2>✨ Our Beginning ✨</h2>
+<img src="her1.jpeg" class="cine-img">
+<p>
+<b>“Some stories begin with a glance… ours began with magic.”</b> 💫<br><br>
+I didn’t know then that my life was about to change forever.<br>
+One conversation, one smile, one moment —<br>
+and suddenly, everything felt brighter.<br><br>
+That moment became the beginning of <b>our story.</b> 💞
+</p>
+</div>
+
+<!-- SLIDE 2 (VIDEO MOMENT) -->
+<div class="slide">
+<h2>🎬 The Moment That Changed Everything</h2>
+<video id="v1" muted playsinline>
+  <source src="yourvideo.mp4" type="video/mp4">
+</video>
+<p>
+This is the video where it all truly began for me.<br>
+The first time I saw you, I didn’t just see you — I felt you.<br>
+Your voice echoed in my heart so deeply that it still stays with me.<br><br>
+In that moment, I didn’t just hear your voice…<br>
+I heard my future. 💕
+</p>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+<h2>💞 When You Became My World</h2>
+<img src="her2.jpeg" class="cine-img">
+<p>
+From that very moment, my life was never the same again.<br><br>
+When I met you, I had no idea you would become this important to me.<br>
+I never imagined that my whole life would revolve around you.<br><br>
+Slowly, you became more than someone I loved —<br>
+you became <b>my love, my life, my peace, my happiness.</b> 💖
+</p>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+<h2>🤍 My Promises to You</h2>
+<p>
+I know I have mostly said,<br>
+“I will do this, I will do that.”<br><br>
+I may not have done much yet,<br>
+but trust me — I mean every word.<br><br>
+I promise we will make every dream come true together.<br>
+We will build our beautiful home,<br>
+filled with love, warmth, and laughter. 🏡💕<br><br>
+And one day when you look back,<br>
+you will feel that every word was true,<br>
+every promise was real,<br>
+and every feeling was pure love.
+</p>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+<h2>🖼️ Two Frames — You & Me</h2>
+<div class="frames">
+  <div class="frame">
+    <h3>This is YOU 💗</h3>
+    <img src="her.jpeg" class="cine-img">
+  </div>
+  <div class="frame">
+    <h3>This is ME 💙</h3>
+    <img src="you.jpeg" class="cine-img">
+  </div>
+</div>
+<p>
+Right now, we are in two different frames…<br>
+but my heart is waiting for the day<br>
+when both of us will stand together in the same one. 🤍
+</p>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+<h2>💓 Two Years Together</h2>
+<img src="c1.jpeg" class="cine-img" id="sl1">
+<p>
+Today we are completing <b>2 beautiful years together.</b><br>
+Two years of love, trust, laughter, and memories.<br><br>
+In these two years, you didn’t just become my partner —<br>
+you became <b>my love, my life, my peace, my happiness.</b> 💞<br><br>
+And still, my heart waits for that one special day…<br>
+when we will finally stand in the same frame — forever. 🤍
+</p>
+</div>
+
+<!-- FINAL SLIDE -->
+<div class="slide">
+<img src="joint.jpeg" class="cine-img">
+<h1>💍 Will You Be My Valentine? 💍</h1>
+<p>
+Because you are not just my Valentine…<br>
+you are <b>my love, my life, my wife, my peace, my happiness.</b> 💗
+</p>
+
+<button id="yes">YES 💖</button>
+<button id="no">NO ❌</button>
+
+<div id="fireworks">🎆 SHE SAID YES 🎆</div>
+<div id="final-line">💗 Varun loves Somii in every universe 💗</div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+// FLOATING HEARTS
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.innerHTML="💗";
+  h.className="heart";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+},500);
+
+// SLIDESHOW
+const slides = document.querySelectorAll(".slide");
+let i = 0;
+
+setInterval(()=>{
+  slides[i].classList.remove("active");
+  i = (i + 1) % slides.length;
+  slides[i].classList.add("active");
+
+  const vid = document.getElementById("v1");
+  vid.pause();
+  vid.currentTime = 0;
+
+  if(i === 1){
+    vid.play().catch(()=>{});
+  }
+
+},15000);
+
+// ROTATE PHOTOS
+let pics = ["c1.jpeg","c2.jpeg","c3.jpeg"];
+let j = 0;
+setInterval(()=>{
+  document.getElementById("sl1").src = pics[j];
+  j = (j + 1) % pics.length;
+},3000);
+
+// MUSIC UNLOCK
+document.addEventListener("click", ()=>{
+  document.getElementById("bgm").play().catch(()=>{});
+}, {once:true});
+
+// RUN-AWAY NO BUTTON
+document.getElementById("no").addEventListener("mouseover",()=>{
+  document.getElementById("no").style.left = (Math.random()*350 - 175) + "px";
+  document.getElementById("no").style.top = (Math.random()*200 - 100) + "px";
+});
+
+// FINAL MESSAGE
+document.getElementById("yes").addEventListener("click",()=>{
+  document.getElementById("fireworks").style.display="block";
+  document.getElementById("final-line").style.display="block";
+});
+
+});
+</script>
+
+</body>
+</html>
